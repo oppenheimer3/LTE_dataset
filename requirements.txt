@@ -2,6 +2,5 @@ leafmap==0.10.5
 matplotlib==3.5.3
 matplotlib-inline==0.1.2
 numpy==1.23.1
-numpy-base==1.23.1
 pandas==1.4.3
 seaborn==0.11.2
