@@ -40,10 +40,13 @@ elif type=='pedestrian':
 elif type=='train':
     type=4
 else: type=3
-if Speed!='' and Operatorname!='' and CellID!=''and RSRP!=''and ServingCell_Distance!='' and type!='':
-    array=np.array([float(Speed),int(Operatorname),int(CellID),int(RSRP),float(ServingCell_Distance),int(type)]).reshape(1,-1)
-    prediction=model.predict(array)
-    st.write('Predicted RSSI is: ',prediction[0],)
+if st.button('Predict'):
+    if Speed!='' and Operatorname!='' and CellID!=''and RSRP!=''and ServingCell_Distance!='' and type!='':
+
+        array=np.array([float(Speed),int(Operatorname),int(CellID),int(RSRP),float(ServingCell_Distance),int(type)]).reshape(1,-1)
+        prediction=model.predict(array)
+        st.write('Predicted RSSI is: ',prediction[0],)
+    else: st.write('enter the missing Parameters')
 
 
 
